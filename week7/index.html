@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>연산자 연습</title>
+
+    <script>
+
+        var a = 'g';
+
+        function fn() {
+            console.log(a);	// ①
+            var a = 'l';
+            console.log(a);    // ②
+        }
+
+        fn();
+    /*
+            let x, y;
+    
+            function calc() {
+                x = parseInt(document.getElementById("x").value);
+                y = parseInt(document.getElementById("y").value);
+                let sum = x + y;
+                document.getElementById("sum").value = sum;
+            }
+    
+            function calc_01() {
+                x = parseInt(document.getElementById("x").value);
+                y = parseInt(document.getElementById("y").value);
+                let result = x + y;
+                console.log("+" + result);
+                result = x * y;
+                console.log("*" + result);
+                result = x % y;
+                console.log("%" + result);
+                console.log(++x + y++);
+            } */
+    </script>
+</head>
+
+<body>
+    <h3>계산기</h3>
+    <form action="#">
+        첫번째 정수 : <input type="text" id="x"> <br>
+        두번째 정수 : <input type="text" id="y"> <br>
+        합계 : <input type="text" id="sum"> <br>
+        <input type="button" value="계산1" onclick="calc()">
+    </form>
+    <br>
+    <input type="button" value="계산2" onclick="calc_01()">
+</body>
+
+</html>

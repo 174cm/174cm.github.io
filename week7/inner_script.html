@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week6 inner script</title>
+    <script>
+        function ex() {
+            document.bgColor = 'yellow';
+            document.getElementById("demo").innerHTML = '동의대학교 홍길동'
+        }
+    </script>
+</head>
+
+<body>
+    <p id="demo">여기에 출력하기 </p>
+    <script>
+        document.write("안녕하세요.");
+        document.bgColor = "red";
+
+    </script>
+    <br>
+    <button onclick="ex()">do</button>
+    <br>
+    <button onclick="alert('알람임.')">알람</button>
+    <br>
+    <button onclick="console.log('this is log')" >console</button>
+</body>
+
+</html>

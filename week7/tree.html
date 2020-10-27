@@ -1,0 +1,40 @@
+<div class="tree">
+    <div>
+        <input type="text" id="tree"> 
+        <input type="submit" onclick="submitTree(0)">
+        <input type="submit" onclick="plusTree(1)" value="+1">
+        <input type="submit" onclick="plusTree(-1)" value="-1">
+        <p id="treesum"></p>
+    </div>
+    <script type="text/javascript">
+        var tree = document.getElementById("tree"); // 인풋선택
+        var sum = ""; // 트리가 들어갈 공간
+        var renum = 0;
+
+        function plusTree(n){ // 플러스
+            makeTree(renum+=n); 
+        };
+
+        function submitTree(n){ // 제출 (변수를 value 값에 지정)
+            renum = tree.value; // 인풋에 입력된 value 
+            renum = parseInt(renum); // value 값을 정수로
+
+            makeTree(renum);
+        }
+        
+        function makeTree(n){ // tree 만드는 메인 함수
+            document.getElementById("treesum").innerHTML = ""; // 기존에 있던 텍스트 삭제
+            sum = "";
+            
+            for(var i = 0; i<n; i++){
+                for(j=0; j<=i; j++){
+                    sum += " * ";
+                }
+                sum += " <br> ";
+            }
+
+            document.getElementById("treesum").innerHTML += sum;
+            tree.value = "";
+        };
+    </script>
+</div>
